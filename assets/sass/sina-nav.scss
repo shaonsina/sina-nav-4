@@ -1,0 +1,1148 @@
+/**
+ * Template name : Sina-nav Multi Purpose Menu
+ * Author 		 : shaonsina
+ */
+
+
+// Variables
+// ==============
+$navBG: #fcfcfc;
+$color: #333;
+$anchorBG: transparent;
+$titleColor: $color;
+
+// Hover, focus
+$hoverColor: #3372ac;
+$hoverBG: transparent;
+
+// Active, active hover, active focus color
+$activeColor: $hoverColor;
+$activeBG: transparent;
+
+// Dropdown & megamenu BG
+$dropdownBG: #fcfcfc;
+$dropdownColor: $color;
+
+// Dropdown Hover & focus Color
+$dropdownHoverBG: #f6f6f6;
+$dropdownHoverColor: $color;
+
+// Border Color
+$border: #eee;
+$topBorder: #eee;
+
+// Special Color
+$specialColor: $hoverColor;
+$specialBG: $navBG;
+
+// Transparent Nav
+$transparentColor: #dddddd;
+$transparentHoverColor: #fff;
+$transTitleColor: $transparentColor;
+
+// Side Menu
+$sideBG: #333;
+$sideColor: #ccc;
+$sideHoverColor: #fcfcfc;
+
+// Share Icon
+$siColor: #fcfcfc;
+$siHoverColor: $siColor;
+$siBG: #777;
+$siHoverBG: $hoverColor;
+
+// Search Bar
+$searchColor: $color;
+$searchBG: #f6f6f6;
+
+// Variables for Small Devices
+// -------------------------------
+$smNavBG: $navBG;
+$smCollapseBG: $dropdownBG;
+$smColor: $color;
+$smHoverBG: $dropdownHoverBG;
+$smHoverColor: $color;
+$smTitleColor: $color;
+
+// Border Color
+$smBorder: $border;
+$smTopBorder: $topBorder;
+
+// Effect
+$transition: all 0.3s ease-in-out;
+$animateTime: 1s;
+
+
+
+// Search Box
+// =================================
+.search-box{
+	padding: 8px 0;
+	display: none;
+	border-radius: 4px;
+	overflow: hidden;
+	background-color: $searchBG;
+
+	input.form-control{
+		border: 0;
+		box-shadow: 0px 0px 0px;
+		color: $searchColor;
+		background-color: transparent;
+	}
+	.search-input{
+		float: left;
+		width: calc( 100% - 108px );
+	}
+	.search-addon{
+		padding: 8px 20px;
+		float: left;
+		color: $searchColor;
+		background-color: transparent;
+
+		&.close-search {
+			cursor: pointer;
+		}
+	}
+}
+
+
+// Genaral Nav
+// =================================
+.sina-nav{
+	margin-bottom: 0;
+	border-radius: 0px;
+	min-height: 60px;
+	z-index: 999;
+	left: 0;
+	right: 0;
+	transition: color, background 0.3s ease-in-out;
+	background: $navBG;
+	border: 1px solid $border;
+
+	ul,
+	ul ul{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	ul li a{
+		display: block;
+		white-space:normal;
+		text-decoration: none;
+		line-height: 20px;
+		transition: $transition;
+		background: transparent;
+	}
+	.animated {
+	    animation-duration: $animateTime;
+	    animation-fill-mode: both;
+	}
+	.container,
+	.container-fluid{
+		position: relative;
+	}
+	// Brand
+	.sina-brand {
+		height: 60px;
+		max-width: 210px;
+		padding: 0;
+		margin: 0 50px 0 0;
+		color: $titleColor;
+		float: left;
+		text-decoration: none;
+
+		> img{
+			display: block;
+			height: 100%;
+			padding: 6px 0;
+		}
+		h2 {
+			font-size: 30px;
+			line-height: 36px;
+			margin: 0;
+			padding: 0;
+		}
+		p {
+			font-size: 14px;
+			line-height: 16px;
+			margin: 0;
+			padding: 0;
+		}
+	}
+	.logo-primary,
+	&.navbar-transparent .logo-secondary{
+		display: inline-block;
+	}
+	.logo-secondary,
+	&.navbar-transparent .logo-primary{
+		display: none;
+	}
+	.dropdown-toggle::after {
+	    width: inherit;
+	    height: inherit;
+	    border: 0;
+	    margin: 0;
+	}
+	.dropdown {
+		position: relative;
+	}
+	.dropdown-menu {
+		position: absolute;
+		display: none;
+		top: 100%;
+		left: 0;
+		z-index: 1000;
+	}
+	.open > .dropdown-menu {
+		display: block;
+	}
+	.collapse:not(.show) {
+		display: none;
+	}
+	.collapsing {
+		position: relative;
+		height: 0;
+		overflow: hidden;
+		transition: height 0.35s ease;
+	}
+	.navbar-collapse {
+		overflow-x: visible;
+		padding-right: 15px;
+		padding-left: 15px;
+		-webkit-overflow-scrolling: touch;
+	}
+	.navbar-collapse.show {
+		overflow-y: auto;
+	}
+	.navbar-collapse:before,
+	.navbar-collapse:after {
+	  content: " ";
+	  display: table;
+	}
+	.navbar-collapse:after {
+	  clear: both;
+	}
+
+	.sina-menu{
+		li {
+			a{
+				position: relative;
+				display: block;
+				font-size: 14px;
+			}
+			.fa-icon-left{
+				margin-right: 8px;
+			}
+			.fa-icon-right{
+				margin-left: 8px;
+			}
+		}
+		> li {
+			> a {
+				padding: 20px;
+				max-width: 160px;
+				color: $color;
+				font-size: 14px;
+				font-weight: 700;
+				line-height: 20px;
+			}
+			&.active > a,
+			> a:hover,
+			> a:focus{
+				color: $hoverColor;
+				background-color: $hoverBG;
+			}
+		}
+		li .description{
+			font-style: italic;
+			font-size: 90%;
+			margin: 6px 0 0;
+			font-weight: 400;
+		}
+		// Dropdown & Mega menu
+		.dropdown-menu{
+			background-color: $dropdownBG;
+			margin: 0;
+
+			li {
+				a{
+					color: $dropdownColor;
+				}
+				&.active > a,
+				> a:hover,
+				> a:focus{
+					color: $dropdownHoverColor;
+					background-color: $dropdownHoverBG;
+				}
+			}
+		}
+		.dropdown-toggle:focus {
+		  outline: 0;
+		}
+		.mega-menu-col-title:before,
+		.dropdown .dropdown-toggle:before,
+		.dropdown .dropdown-toggle:after{
+			font-family: 'FontAwesome';
+		}
+	}
+
+	// Navbar Reverse
+	&.navbar-reverse .search-box .form-control{
+		text-align: right;
+	}
+	.navbar-collapse{
+		padding: 0;
+	}
+
+
+	// Mega Menu
+	// =================================
+	.menu-item-has-mega-menu.dropdown{
+		position: static;
+
+		.mega-menu.dropdown-menu {
+			width: 100%;
+			padding: 0;
+			background-color: $dropdownBG;
+		}
+		.mega-menu-row {
+			width: 100%;
+			float: left;
+		}
+		.mega-menu-col{
+			list-style: none;
+			color: $dropdownColor;
+
+			a{
+				color: $dropdownColor;
+			}
+			.active > a,
+			> a:hover,
+			> a:focus{
+				color: $hoverColor;
+				background: transparent;
+			}
+		}
+		.mega-menu-col-title{
+			font-size: 15px;
+			line-height: 20px;
+			margin: 0;
+		}
+	}
+
+
+	// Fixed Nav
+	// =================================
+	&.navbar-fixed{
+		position: relative;
+	}
+
+
+	// Extension Nav
+	// =================================
+	.extension-nav{
+		float: right;
+		margin-left: 50px;
+
+		> ul{
+			float: left;
+
+			> li{
+				float: left;
+
+				> a{
+					display: block;
+					padding: 20px 12px;
+					position: relative;
+					font-size: 18px;
+					color: $color;
+
+					&:hover,
+					&:focus {
+						color: $hoverColor;
+						background-color: $hoverBG;
+					}
+					.shop-badge{
+						position: absolute;
+						top: 12px;
+						right: 10px;
+						padding: 4px 5px;
+						font-size: 10px;
+						line-height: 10px;
+						border-radius: 50%;
+						background-color: $specialColor;
+						color: #fff;
+					}
+				}
+				&.dropdown .dropdown-menu{
+					border-radius: 0px;
+					box-shadow: 0px 0px 0px;
+					margin-left: 40px;
+					width: 232px;
+					left: -232px;
+					background-color: $dropdownBG;
+					border: solid 1px $border;
+				}
+				.shop-menu > li {
+					padding: 12px 15px;
+					width: 100%;
+					overflow: hidden;
+					border-bottom: solid 1px $border;
+
+					&:last-child{
+						border-bottom: 0;
+					}
+					.shop-item-photo{
+						padding: 0;
+						float: left;
+						width: 60px;
+						height: 60px;
+						margin-right: 10px;
+						border: solid 1px $border;
+					}
+					.shop-item-link,
+					.shop-item-price{
+						margin: 0;
+						padding: 0;
+						font-size: 14px;
+						line-height: 20px;
+						display: inline-block;
+						max-width: 130px;
+						color: $dropdownColor;
+					}
+					.shop-item-link{
+						color: $specialColor;
+
+						&:hover,
+						&:focus{
+							background-color: transparent;
+						}
+					}
+					&.shop-total-price{
+						.shop-btn{
+							display: inline-block;
+							color: $dropdownColor;
+							background-color: $dropdownBG;
+
+							&:hover,
+							&:focus{
+								background-color: $specialColor;
+								color: #eee;
+							}
+						}
+						> span {
+							color: $dropdownColor;
+							float: right;
+							font-weight: 700;
+							margin-top: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// For WordPress Toolbar
+	&.navbar-fixed.navbar-freez.wp-topbar,
+	&.mobile-sidebar.wp-topbar .navbar-collapse,
+	&.wp-topbar .widget-bar{
+		top: 32px;
+	}
+
+
+	// Widget-bar
+	// =================================
+	.widget-bar{
+		position: fixed;
+		overflow-y: auto;
+		top: 0;
+		right: -300px;
+		width: 300px;
+		padding: 20px;
+		height: 100%;
+		z-index: 999;
+		transition: all 0.3s ease-in-out;
+		background-color: $sideBG;
+
+		&.on{
+			right: 0;
+		}
+		.widget{
+			margin-bottom: 30px;
+
+			.link li a{
+				color: $sideColor;
+				font-size: 14px;
+
+				&:focus,
+				&:hover{
+					color: $sideHoverColor;
+				}
+			}
+			.title{
+				font-size: 16px;
+				margin-bottom: 10px;
+				color: $sideColor;
+				font-weight: 700;
+			}
+		}
+		.close-widget-bar{
+			float: right;
+			font-size: 16px;
+			color: $sideColor;
+		}
+	}
+	&.navbar-reverse .widget-bar{
+		right: inherit;
+		left: -300px;
+		text-align: right;
+
+		&.on{
+			right: inherit;
+			left: 0;
+		}
+		.close-widget-bar{
+			float: left;
+		}
+	}
+}
+
+
+// =========================
+// Responsive
+// =========================
+@media (min-width: 992px) {
+	.sina-nav{
+		.navbar-toggle {
+		  display: none;
+		}
+		.navbar-collapse.collapse {
+			display: block;
+		}
+
+
+		// For Navbar Reverse
+		// =================================
+		&.navbar-reverse{
+			.sina-nav-header {
+				float: right;
+			}
+			.container,
+			.container-fluid{
+			}
+			.sina-brand{
+				margin: 0 0 0 50px;
+				text-align: right;
+			}
+			.extension-nav {
+				float: left;
+				margin-right: 50px;
+				margin-left: 0;
+
+				li{
+					float: right;
+				}
+			}
+		}
+
+
+		// Dropdown Menu
+		// =================================
+		.sina-menu {
+			float: left;
+
+			> li {
+				float: left;
+			}
+			&.navbar-left {
+				float: left !important;
+			}
+			> .dropdown > .dropdown-toggle:after{
+				content: "\f0d7";
+				position: absolute;
+				top: 20px;
+				right: 5px;
+			}
+			.dropdown .dropdown-menu{
+				box-shadow: 0px 0px 0px;
+				border-radius: 0px;
+				width: 200px;
+				border: solid 1px $border;
+
+				.dropdown-menu{
+					left: 100%;
+					top: 0;
+				}
+				.dropdown:first-child .dropdown-menu{
+					top: -1px;
+				}
+				> li {
+					> a{
+						padding: 10px 12px;
+						border-top: solid 1px $topBorder;
+					}
+					&:first-child > a{
+						border-top: 0;
+					}
+				}
+				.dropdown > .dropdown-toggle{
+					padding: 10px 20px 10px 12px;
+
+					&:before{
+						float: right;
+						content: "\f105";
+						position: absolute;
+						right: 8px;
+					}
+				}
+			}
+
+
+			// Megamenu
+			// =================================
+			.dropdown .mega-menu.dropdown-menu{
+				max-height: 400px;
+				overflow-y: auto;
+			}
+			.mega-menu-col{
+				padding: 10px 15px;
+				float: left;
+
+				.sub-menu{
+					a {
+						padding: 6px 10px;
+						display: inline-block;
+
+						&:hover,
+						&:focus{
+							color: $hoverColor;
+							background: transparent;
+						}
+					}
+				}
+			}
+			.mega-menu-col-title{
+				font-weight: 700;
+				padding: 6px 10px;
+				display: inline-block;
+			}
+			.mega-menu-col-content{
+				padding: 4px 10px;
+			}
+			
+
+			// Menu Right
+			// =================================
+			&.navbar-right{
+				float: right !important;
+				left: auto;
+				right: 0;
+
+				.mega-menu.dropdown-menu .mega-menu-col{
+					float: right;
+				}
+				.dropdown-menu .dropdown-menu{
+					left: -200px;
+				}
+				> .dropdown > .dropdown-toggle:after{
+					left: 5px;
+				}
+				.dropdown .dropdown-menu {
+					text-align: right;
+
+					.dropdown > .dropdown-toggle{
+						padding: 10px 12px 10px 20px;
+
+						&:before{
+							float: left;
+							content: "\f104";
+							left: 8px;
+							right: inherit;
+						}
+					}
+				}
+			}
+		}
+
+
+
+		// Fiexd Nav
+		// ==================
+		&.navbar-fixed.navbar-freez{
+			position: fixed !important;
+			top: 0;
+		}
+
+
+		// Transparent Nav
+		// ===========================
+		&.navbar-transparent{
+			background-color: transparent;
+			border-color: transparent;
+
+			.sina-brand{
+				color: $transTitleColor;
+			}
+			.extension-nav > ul > li > a,
+			.sina-menu > li > a{
+				color: $transparentColor;
+			}
+			.extension-nav > ul > li,
+			.sina-menu > li{
+				&.active > a,
+				> a:hover,
+				> a:focus{
+					color: $transparentHoverColor;
+				}
+			}
+		}
+
+
+		// Barnd Center
+		// =================================
+		&.logo-center{
+			.sina-nav-header{
+				width: 100%;
+				position: absolute;
+				text-align: center;
+				top: 0;
+				left: 0;
+			}
+			.sina-brand{
+				float: none;
+				display: inline-block;
+				margin: 0;
+			}
+			.navbar-collapse{
+				text-align: center;
+
+				.col-half{
+					width: 50%;
+					float: left;
+					display: block;
+
+					&.left{
+						text-align: right;
+						padding-right: 120px;
+					}
+					&.right{
+						text-align: left;
+						padding-left: 120px;
+					}
+				}
+			}
+			.sina-menu{
+				float: none !important;
+				margin: 0 0 -7px 0;
+				display: inline-block;
+				padding: 0;
+
+				> li {
+					> .dropdown-menu{
+						margin-top: -1px;
+
+						&.mega-menu{
+							margin-top: 0;
+						}
+					}
+				}
+			}
+		}
+
+
+		// Menu Center
+		// =================================
+		.sina-menu.navbar-center{
+			float:none;
+			margin: 0 auto;
+			display: table;
+		}
+	}
+}
+
+
+@media (max-width: 991px) {
+	// Genaral nav 
+	// =========================
+	.sina-nav{
+		background-color: $smNavBG;
+		border-color: $smBorder;
+
+		// For WordPress Toolbar
+		&.navbar-fixed.navbar-freez.wp-topbar{
+			top: inherit;
+		}
+		// Brand
+		.sina-brand {
+			display: inline-block;
+			float: none;
+			text-align: center;
+			margin: 0 0 0 -35px;
+			color: $smTitleColor;
+
+			h2 {
+				margin-top: 0;
+			}
+		}
+		// Brand
+		&.navbar-reverse,
+		&.navbar-reverse{
+			.sina-brand {
+				margin: 0 -26px 0 15px;
+			}
+		}
+		.sina-nav-header {
+			float: none;
+			display: block;
+			text-align: center;
+			height: 60px;
+		}
+		.navbar-toggle {
+			display: inline-block;
+			position: relative;
+			float: left;
+			font-size: 18px;
+			margin: 13px 0 0 0;
+			padding: 4px 10px;
+			width: 38px;
+			cursor: pointer;
+			background-color: transparent;
+			background-image: none;
+			border: 1px solid transparent;
+			border-radius: 4px;
+			transition: $transition;
+			color: $smColor;
+
+			&:hover,
+			&:focus{
+				outline: 0;
+				color: $smHoverColor;
+				background-color: $smHoverBG;
+			}
+		}
+		&.navbar-reverse{
+			.navbar-toggle {
+				float: right;
+			}
+			.extension-nav{
+				left: 15px;
+				right: inherit;
+				margin-left: 0;
+				margin-right: 15px;
+
+				li{
+					float: right;
+				}
+			}
+		}
+		.navbar-collapse {
+			overflow-y: auto !important;
+			border: 1px solid $smBorder;
+		}
+		// Dropdown & Mega Menu
+		.mega-menu-col .mega-menu-col-title,
+		.dropdown .dropdown-toggle{
+			padding: 10px 24px 10px 12px;
+
+			&:before{
+				float: right;
+				content: "\f105";
+				font-size: 16px;
+				position: absolute;
+				right: 8px;
+			}
+		}
+		.mega-menu-col.on .mega-menu-col-title:before,
+		.dropdown.on > .dropdown-toggle:before{
+			content: "\f107";
+		}
+		.sina-menu {
+			float: none !important;
+
+			// Right menu
+			&.navbar-right{
+				&,
+				.mega-menu-col-title,
+				li a{
+					text-align: right;
+				}
+				.mega-menu-col .mega-menu-col-title,
+				.dropdown .dropdown-toggle{
+					padding: 10px 12px 10px 24px;
+
+					&:before{
+						content: "\f104";
+						float: left;
+						font-size: 16px;
+						left: 8px;
+						right: inherit;
+					}
+				}
+				.mega-menu-col.on .mega-menu-col-title:before,
+				.dropdown.on > .dropdown-toggle:before{
+					content: "\f107";
+				}
+			}
+			li {
+				float: none;
+
+				.mega-menu-col-title,
+				a{
+					max-width: inherit;
+					padding: 10px 12px;
+					font-weight: 400;
+					display: block;
+					cursor: pointer;
+					font-size: 14px;
+					line-height: 20px;
+					transition: $transition;
+					color: $smColor;
+					border-top: solid 1px $smTopBorder;
+				}
+				a:hover,
+				a:focus,
+				&.active > a,
+				.mega-menu-col-title:hover,
+				.mega-menu.dropdown-menu .mega-menu-col .active > a,
+				.dropdown-menu li.active > a,
+				.dropdown-menu li a:hover,
+				.dropdown-menu li a:focus,
+				.mega-menu .mega-menu-col ul li a:hover,
+				.mega-menu .mega-menu-col ul li a:focus{
+					color: $smHoverColor;
+					background-color: $smHoverBG;
+				}
+			}
+			> li:first-child > a {
+				border-top: 0;
+			}
+		}
+		// Dropdown & Mega Menu
+		.sina-menu .dropdown .mega-menu.dropdown-menu,
+		.sina-menu .dropdown .dropdown-menu{
+			float: none;
+			position: relative;
+			left: 0;
+			box-shadow: 0px 0px 0px;
+			border-radius: 0px 0px 0px;
+			border: 0;
+			background-color: transparent;
+		}
+
+
+		// Megamenu
+		// =================================
+		.sina-menu .dropdown .mega-menu.dropdown-menu .mega-menu-row{
+			float: none;
+
+			.mega-menu-col {
+				padding: 0;
+			}
+			.mega-menu-col-title{
+				font-size: 14px;
+			}
+		}
+
+
+		// Transparent
+		// =================================
+		&.navbar-transparent {
+		    border-color: transparent;
+		}
+
+
+		// Logo Center
+		// =================================
+		&.logo-center{
+			.sina-menu{
+				.dropdown .dropdown-toggle:before{
+					content: "\f105";
+					float: right;
+				}
+				.dropdown.on > .dropdown-toggle:before{
+					content: "\f107";
+				}
+				// Right menu
+				&,
+				&.navbar-right,
+				&.navbar-right .mega-menu-col-title,
+				&.navbar-right li a,
+				li a{
+					text-align: left;
+				}
+				&.navbar-right{
+					.mega-menu-col .mega-menu-col-title,
+					.dropdown .dropdown-toggle{
+						padding: 10px 24px 10px 12px;
+
+						&:before{
+							content: "\f105";
+							float: right;
+							right: 8px;
+							left: inherit;
+						}
+					}
+					.mega-menu-col.on .mega-menu-col-title:before,
+					.dropdown.on > .dropdown-toggle:before{
+						content: "\f107";
+					}
+				}
+			}
+			.col-half:first-child .sina-menu {
+				padding-bottom: 0;
+
+				> li:first-child > a{
+					border-top: 0;
+				}
+			}
+			.col-half:last-child .sina-menu {
+				padding-top: 0;
+
+				> li:first-child > a{
+					border-top: solid 1px $smTopBorder;
+				}
+			}
+		}
+
+
+		// Exntension Nav
+		// =================================
+		.extension-nav{
+			position: absolute;
+			right: 15px;
+			margin-right: 0;
+
+			> ul {
+				> .dropdown > .dropdown-toggle,
+				> li > a{
+					padding: 20px 10px;
+					color: $smColor;
+
+					&:hover,
+					&:focus {
+						color: $smHoverColor;
+					}
+				}
+				.dropdown> .dropdown-toggle:before{
+					display: none;
+				}
+			}
+		}
+	}
+
+
+	// Mobile Sibebar
+	// =================================
+	.sina-nav.mobile-sidebar {
+		.navbar-collapse{
+			position: fixed;
+			overflow-x: hidden;
+			display: block;
+			z-index: 99;
+			width: 300px;
+			height: 100% !important;
+			max-height: 100%;
+			left: -300px;
+			top: 0;
+			padding: 0 0 60px;
+			margin: 0;
+			transition: all 0.3s ease-in-out;
+			background-color: $smCollapseBG;
+
+			&.show{
+				left: 0;
+			}
+			.mega-menu-col {
+				width: 100%;
+				max-width: 100%;
+			}
+		}
+		.sina-menu{
+			padding: 15px;
+			margin: 0;
+		}
+		&.navbar-reverse {
+			.navbar-collapse{
+				right: -300px;
+				left: inherit;
+
+				&.show{
+					right: 0;
+					left: inherit;
+				}
+			}
+		}
+	}
+	body {
+		&.mobile-left > .wrapper{
+			margin-left: 300px;
+			margin-right: -300px;
+		}
+		&.mobile-right > .wrapper{
+			margin-right: 300px;
+			margin-left: -300px;
+		}
+		> .wrapper{
+			transition: all 0.3s ease-in-out;
+			position: relative;
+		}
+	}
+}
+
+
+@media (max-width: 767px) {
+	// Genaral Nav
+	// ==================
+	.sina-nav{
+		.sina-nav-header,
+		.navbar-collapse {
+			margin: 0;
+		}
+		.sina-brand.social-on {
+			margin-top: 60px;
+		}
+	}
+}
+
+
+@media (max-width: 479px) {
+	.sina-nav{
+		.widget-bar{
+			right: -250px;
+			width: 250px;
+		}
+	}
+	// For Side menu
+	body.on-side{
+		margin-left: -250px;
+	}
+
+
+	// Mobile Sibebar
+	// =================================
+	body.mobile-left > .wrapper{
+		margin-left: 250px;
+		margin-right: -250px;
+	}
+	body.mobile-right > .wrapper{
+		margin-right: 250px;
+		margin-left: -250px;
+	}
+	.sina-nav.mobile-sidebar .navbar-collapse{
+		width: 250px;
+		left: -250px;
+	}
+}
+
+
+// For WordPress Toolbar
+@media (max-width: 782px) {
+	.sina-nav{
+		&.mobile-sidebar.wp-topbar .navbar-collapse{
+			top: 46px;
+		}
+		&.wp-topbar .widget-bar{
+			top: 46px;
+		}
+	}
+}
