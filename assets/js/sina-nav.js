@@ -10,6 +10,7 @@
 			var getNav		= $(this),
 				top 		= getNav.data('top') || getNav.offset().top,
 				mdTop 		= getNav.data('md-top') || getNav.offset().top,
+				xlTop 		= getNav.data('xl-top') || getNav.offset().top,
 				navigation 	= getNav.find('.sina-menu'),
 				getWindow 	= $(window).outerWidth(),
 				getIn 		= navigation.data('in'),
@@ -89,7 +90,10 @@
 				var scrollTop = $(window).scrollTop(),
 					winWidth  = $(window).outerWidth();
 
-				if( winWidth > 1199 && scrollTop > top ){
+				if( winWidth > 1599 && scrollTop > xlTop ){
+					getNav.addClass('navbar-freez');
+				}
+				else if( winWidth > 1199 && scrollTop > top ){
 					getNav.addClass('navbar-freez');
 				}
 				else if( winWidth > 991 && scrollTop > mdTop ){
@@ -119,7 +123,10 @@
 				var scrollTop = $(window).scrollTop(),
 					winWidth  = $(window).outerWidth();
 
-				if( winWidth > 1199 && scrollTop > top ){
+				if( winWidth > 1599 && scrollTop > xlTop ){
+					getNav.removeClass('navbar-transparent');
+				}
+				else if( winWidth > 1199 && scrollTop > top ){
 					getNav.removeClass('navbar-transparent');
 				}
 				else if( winWidth > 991 && scrollTop > mdTop ){

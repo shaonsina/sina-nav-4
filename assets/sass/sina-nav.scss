@@ -73,7 +73,6 @@ $transition: all 0.3s ease-in-out;
 $animateTime: 1s;
 
 
-
 // Search Box
 // =================================
 .search-box{
@@ -134,8 +133,8 @@ $animateTime: 1s;
 		background: transparent;
 	}
 	.animated {
-	    animation-duration: $animateTime;
-	    animation-fill-mode: both;
+		animation-duration: $animateTime;
+		animation-fill-mode: both;
 	}
 	.container,
 	.container-fluid{
@@ -178,10 +177,10 @@ $animateTime: 1s;
 		display: none;
 	}
 	.dropdown-toggle::after {
-	    width: inherit;
-	    height: inherit;
-	    border: 0;
-	    margin: 0;
+		width: inherit;
+		height: inherit;
+		border: 0;
+		margin: 0;
 	}
 	.dropdown {
 		position: relative;
@@ -216,11 +215,11 @@ $animateTime: 1s;
 	}
 	.navbar-collapse:before,
 	.navbar-collapse:after {
-	  content: " ";
-	  display: table;
+		content: " ";
+		display: table;
 	}
 	.navbar-collapse:after {
-	  clear: both;
+		clear: both;
 	}
 
 	.sina-menu{
@@ -277,7 +276,7 @@ $animateTime: 1s;
 			}
 		}
 		.dropdown-toggle:focus {
-		  outline: 0;
+			outline: 0;
 		}
 		.mega-menu-col-title:before,
 		.dropdown .dropdown-toggle:before,
@@ -514,7 +513,7 @@ $animateTime: 1s;
 @media (min-width: 992px) {
 	.sina-nav{
 		.navbar-toggle {
-		  display: none;
+			display: none;
 		}
 		.navbar-collapse.collapse {
 			display: block;
@@ -889,7 +888,7 @@ $animateTime: 1s;
 				.mega-menu-col-title,
 				a{
 					max-width: inherit;
-					padding: 10px 12px;
+					padding: 15px 12px;
 					font-weight: 400;
 					display: block;
 					cursor: pointer;
@@ -947,7 +946,7 @@ $animateTime: 1s;
 		// Transparent
 		// =================================
 		&.navbar-transparent {
-		    border-color: transparent;
+			border-color: transparent;
 		}
 
 
