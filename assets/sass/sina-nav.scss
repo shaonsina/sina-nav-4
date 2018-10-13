@@ -938,31 +938,6 @@ $animateTime: 1s;
 				.dropdown.on > .dropdown-toggle:before{
 					content: "\f107";
 				}
-				// Right menu
-				&,
-				&.navbar-right,
-				&.navbar-right .mega-menu-col-title,
-				&.navbar-right li a,
-				li a{
-					text-align: left;
-				}
-				&.navbar-right{
-					.mega-menu-col .mega-menu-col-title,
-					.dropdown .dropdown-toggle{
-						padding: 10px 24px 10px 12px;
-
-						&:before{
-							content: "\f105";
-							float: right;
-							right: 8px;
-							left: inherit;
-						}
-					}
-					.mega-menu-col.on .mega-menu-col-title:before,
-					.dropdown.on > .dropdown-toggle:before{
-						content: "\f107";
-					}
-				}
 			}
 			.col-half:first-child .sina-menu {
 				padding-bottom: 0;
