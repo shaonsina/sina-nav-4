@@ -67,7 +67,6 @@
   max-width: 210px;
   padding: 0;
   margin: 0 50px 0 0;
-  color: #333;
   float: left;
   text-decoration: none;
 }
@@ -77,12 +76,14 @@
   padding: 6px 0;
 }
 .sina-nav .sina-brand h2 {
+  color: #333;
   font-size: 30px;
   line-height: 36px;
   margin: 0;
   padding: 0;
 }
 .sina-nav .sina-brand p {
+  color: #333;
   font-size: 14px;
   line-height: 16px;
   margin: 0;
@@ -639,34 +640,13 @@
   .sina-nav .sina-menu {
     float: none !important;
   }
-  .sina-nav .sina-menu.navbar-right,
-  .sina-nav .sina-menu.navbar-right .mega-menu-col-title,
-  .sina-nav .sina-menu.navbar-right li a {
-    text-align: right;
-  }
-  .sina-nav .sina-menu.navbar-right .mega-menu-col .mega-menu-col-title,
-  .sina-nav .sina-menu.navbar-right .dropdown .dropdown-toggle {
-    padding: 10px 12px 10px 24px;
-  }
-  .sina-nav .sina-menu.navbar-right .mega-menu-col .mega-menu-col-title:before,
-  .sina-nav .sina-menu.navbar-right .dropdown .dropdown-toggle:before {
-    content: "\f104";
-    float: left;
-    font-size: 16px;
-    left: 8px;
-    right: inherit;
-  }
-  .sina-nav .sina-menu.navbar-right .mega-menu-col.on .mega-menu-col-title:before,
-  .sina-nav .sina-menu.navbar-right .dropdown.on > .dropdown-toggle:before {
-    content: "\f107";
-  }
   .sina-nav .sina-menu li {
     float: none;
   }
   .sina-nav .sina-menu li .mega-menu-col-title,
   .sina-nav .sina-menu li a {
     max-width: inherit;
-    padding: 10px 12px;
+    padding: 15px 12px;
     font-weight: 400;
     display: block;
     cursor: pointer;

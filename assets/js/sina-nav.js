@@ -13,6 +13,7 @@
 				xlTop 		= getNav.data('xl-top') || getNav.offset().top,
 				navigation 	= getNav.find('.sina-menu'),
 				getWindow 	= $(window).outerWidth(),
+				anim 		= getNav.data('animate-prefix') || '',
 				getIn 		= navigation.data('in'),
 				getOut 		= navigation.data('out');
 
@@ -191,7 +192,7 @@
 					return false;
 				});
 
-				$('.dropdown-menu', menu).addClass('animated');
+				$('.dropdown-menu', menu).addClass(anim+'animated');
 				$('.dropdown', menu).on('mouseenter', function(){
 					var dropdown = this;
 
@@ -204,7 +205,7 @@
 					$('.dropdown-menu', dropdown).eq(0).removeClass(getIn).stop().fadeOut().addClass(getOut);
 					$(dropdown).removeClass('on');
 				});
-				$('.mega-menu-col', menu).children('.sub-menu').removeClass('dropdown-menu animated');
+				$('.mega-menu-col', menu).children('.sub-menu').removeClass('dropdown-menu '+anim+'animated');
 			});
 
 			if( getWindow < 992 ) {
@@ -213,7 +214,7 @@
 					var megamenu 	= this,
 						$columnMenus = [];
 
-					$('.mega-menu-col', megamenu).children('.sub-menu').addClass('dropdown-menu animated');
+					$('.mega-menu-col', megamenu).children('.sub-menu').addClass('dropdown-menu '+anim+'animated');
 					$('.mega-menu-col', megamenu).each(function(){
 						var megamenuColumn = this;
 

@@ -146,7 +146,6 @@ $animateTime: 1s;
 		max-width: 210px;
 		padding: 0;
 		margin: 0 50px 0 0;
-		color: $titleColor;
 		float: left;
 		text-decoration: none;
 
@@ -156,12 +155,14 @@ $animateTime: 1s;
 			padding: 6px 0;
 		}
 		h2 {
+			color: $titleColor;
 			font-size: 30px;
 			line-height: 36px;
 			margin: 0;
 			padding: 0;
 		}
 		p {
+			color: $titleColor;
 			font-size: 14px;
 			line-height: 16px;
 			margin: 0;
@@ -858,30 +859,6 @@ $animateTime: 1s;
 		.sina-menu {
 			float: none !important;
 
-			// Right menu
-			&.navbar-right{
-				&,
-				.mega-menu-col-title,
-				li a{
-					text-align: right;
-				}
-				.mega-menu-col .mega-menu-col-title,
-				.dropdown .dropdown-toggle{
-					padding: 10px 12px 10px 24px;
-
-					&:before{
-						content: "\f104";
-						float: left;
-						font-size: 16px;
-						left: 8px;
-						right: inherit;
-					}
-				}
-				.mega-menu-col.on .mega-menu-col-title:before,
-				.dropdown.on > .dropdown-toggle:before{
-					content: "\f107";
-				}
-			}
 			li {
 				float: none;
 
