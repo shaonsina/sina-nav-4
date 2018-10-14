@@ -1,18 +1,21 @@
 /**
- * Template name : Sina-nav Multi Purpose Menu
- * Author 		 : shaonsina
+ * Template name: Sina-nav Multi Purpose Menu
+ * Template URI: https://github.com/shaonsina/sina-nav-4
+ * Version: 1.2
+ * Author: shaonsina
  */
 
 
 // Variables
 // ==============
-$navBG: #fcfcfc;
-$color: #333;
+$navBG: #fff;
+$color: #222;
 $anchorBG: transparent;
 $titleColor: $color;
+$font: 'Montserrat', sans-serif;
 
 // Hover, focus
-$hoverColor: #3372ac;
+$hoverColor: #FBA500;
 $hoverBG: transparent;
 
 // Active, active hover, active focus color
@@ -37,7 +40,7 @@ $specialBG: $navBG;
 
 // Transparent Nav
 $transparentColor: #dddddd;
-$transparentHoverColor: #fff;
+$transparentHoverColor: #FBA500;
 $transTitleColor: $transparentColor;
 
 // Side Menu
@@ -126,9 +129,11 @@ $animateTime: 1s;
 	}
 	ul li a{
 		display: block;
-		white-space:normal;
-		text-decoration: none;
+		font-family: $font;
+		text-transform: uppercase;
 		line-height: 20px;
+		text-decoration: none;
+		white-space:normal;
 		transition: $transition;
 		background: transparent;
 	}
@@ -842,7 +847,7 @@ $animateTime: 1s;
 		// Dropdown & Mega Menu
 		.mega-menu-col .mega-menu-col-title,
 		.dropdown .dropdown-toggle{
-			padding: 10px 24px 10px 12px;
+			padding: 12px 24px 12px 12px;
 
 			&:before{
 				float: right;
@@ -865,7 +870,7 @@ $animateTime: 1s;
 				.mega-menu-col-title,
 				a{
 					max-width: inherit;
-					padding: 15px 12px;
+					padding: 12px;
 					font-weight: 400;
 					display: block;
 					cursor: pointer;

@@ -1,6 +1,8 @@
 /**
- * Template name : Sina-nav Multi Purpose Menu
- * Author 		 : shaonsina
+ * Template name: Sina-nav Multi Purpose Menu
+ * Template URI: https://github.com/shaonsina/sina-nav-4
+ * Version: 1.2
+ * Author: shaonsina
  */
 .search-box {
   padding: 8px 0;
@@ -12,7 +14,7 @@
 .search-box input.form-control {
   border: 0;
   box-shadow: 0px 0px 0px;
-  color: #333;
+  color: #222;
   background-color: transparent;
 }
 .search-box .search-input {
@@ -22,7 +24,7 @@
 .search-box .search-addon {
   padding: 8px 20px;
   float: left;
-  color: #333;
+  color: #222;
   background-color: transparent;
 }
 .search-box .search-addon.close-search {
@@ -37,7 +39,7 @@
   left: 0;
   right: 0;
   transition: color, background 0.3s ease-in-out;
-  background: #fcfcfc;
+  background: #fff;
   border: 1px solid #eee;
 }
 .sina-nav ul,
@@ -48,9 +50,11 @@
 }
 .sina-nav ul li a {
   display: block;
-  white-space: normal;
-  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
   line-height: 20px;
+  text-decoration: none;
+  white-space: normal;
   transition: all 0.3s ease-in-out;
   background: transparent;
 }
@@ -76,14 +80,14 @@
   padding: 6px 0;
 }
 .sina-nav .sina-brand h2 {
-  color: #333;
+  color: #222;
   font-size: 30px;
   line-height: 36px;
   margin: 0;
   padding: 0;
 }
 .sina-nav .sina-brand p {
-  color: #333;
+  color: #222;
   font-size: 14px;
   line-height: 16px;
   margin: 0;
@@ -154,7 +158,7 @@
 .sina-nav .sina-menu > li > a {
   padding: 20px;
   max-width: 160px;
-  color: #333;
+  color: #222;
   font-size: 14px;
   font-weight: 700;
   line-height: 20px;
@@ -162,7 +166,7 @@
 .sina-nav .sina-menu > li.active > a,
 .sina-nav .sina-menu > li > a:hover,
 .sina-nav .sina-menu > li > a:focus {
-  color: #3372ac;
+  color: #FBA500;
   background-color: transparent;
 }
 .sina-nav .sina-menu li .description {
@@ -176,12 +180,12 @@
   margin: 0;
 }
 .sina-nav .sina-menu .dropdown-menu li a {
-  color: #333;
+  color: #222;
 }
 .sina-nav .sina-menu .dropdown-menu li.active > a,
 .sina-nav .sina-menu .dropdown-menu li > a:hover,
 .sina-nav .sina-menu .dropdown-menu li > a:focus {
-  color: #333;
+  color: #222;
   background-color: #f6f6f6;
 }
 .sina-nav .sina-menu .dropdown-toggle:focus {
@@ -212,15 +216,15 @@
 }
 .sina-nav .menu-item-has-mega-menu.dropdown .mega-menu-col {
   list-style: none;
-  color: #333;
+  color: #222;
 }
 .sina-nav .menu-item-has-mega-menu.dropdown .mega-menu-col a {
-  color: #333;
+  color: #222;
 }
 .sina-nav .menu-item-has-mega-menu.dropdown .mega-menu-col .active > a,
 .sina-nav .menu-item-has-mega-menu.dropdown .mega-menu-col > a:hover,
 .sina-nav .menu-item-has-mega-menu.dropdown .mega-menu-col > a:focus {
-  color: #3372ac;
+  color: #FBA500;
   background: transparent;
 }
 .sina-nav .menu-item-has-mega-menu.dropdown .mega-menu-col-title {
@@ -246,10 +250,10 @@
   padding: 20px 12px;
   position: relative;
   font-size: 18px;
-  color: #333;
+  color: #222;
 }
 .sina-nav .extension-nav > ul > li > a:hover, .sina-nav .extension-nav > ul > li > a:focus {
-  color: #3372ac;
+  color: #FBA500;
   background-color: transparent;
 }
 .sina-nav .extension-nav > ul > li > a .shop-badge {
@@ -260,7 +264,7 @@
   font-size: 10px;
   line-height: 10px;
   border-radius: 50%;
-  background-color: #3372ac;
+  background-color: #FBA500;
   color: #fff;
 }
 .sina-nav .extension-nav > ul > li.dropdown .dropdown-menu {
@@ -297,25 +301,25 @@
   line-height: 20px;
   display: inline-block;
   max-width: 130px;
-  color: #333;
+  color: #222;
 }
 .sina-nav .extension-nav > ul > li .shop-menu > li .shop-item-link {
-  color: #3372ac;
+  color: #FBA500;
 }
 .sina-nav .extension-nav > ul > li .shop-menu > li .shop-item-link:hover, .sina-nav .extension-nav > ul > li .shop-menu > li .shop-item-link:focus {
   background-color: transparent;
 }
 .sina-nav .extension-nav > ul > li .shop-menu > li.shop-total-price .shop-btn {
   display: inline-block;
-  color: #333;
+  color: #222;
   background-color: #fcfcfc;
 }
 .sina-nav .extension-nav > ul > li .shop-menu > li.shop-total-price .shop-btn:hover, .sina-nav .extension-nav > ul > li .shop-menu > li.shop-total-price .shop-btn:focus {
-  background-color: #3372ac;
+  background-color: #FBA500;
   color: #eee;
 }
 .sina-nav .extension-nav > ul > li .shop-menu > li.shop-total-price > span {
-  color: #333;
+  color: #222;
   float: right;
   font-weight: 700;
   margin-top: 5px;
@@ -451,7 +455,7 @@
     display: inline-block;
   }
   .sina-nav .sina-menu .mega-menu-col .sub-menu a:hover, .sina-nav .sina-menu .mega-menu-col .sub-menu a:focus {
-    color: #3372ac;
+    color: #FBA500;
     background: transparent;
   }
   .sina-nav .sina-menu .mega-menu-col-title {
@@ -509,7 +513,7 @@
   .sina-nav.navbar-transparent .sina-menu > li.active > a,
   .sina-nav.navbar-transparent .sina-menu > li > a:hover,
   .sina-nav.navbar-transparent .sina-menu > li > a:focus {
-    color: #fff;
+    color: #FBA500;
   }
   .sina-nav.logo-center .sina-nav-header {
     width: 100%;
@@ -559,7 +563,7 @@
 }
 @media (max-width: 991px) {
   .sina-nav {
-    background-color: #fcfcfc;
+    background-color: #fff;
     border-color: #eee;
   }
   .sina-nav.navbar-fixed.navbar-freez.wp-topbar {
@@ -570,7 +574,7 @@
     float: none;
     text-align: center;
     margin: 0 0 0 -35px;
-    color: #333;
+    color: #222;
   }
   .sina-nav .sina-brand h2 {
     margin-top: 0;
@@ -598,11 +602,11 @@
     border: 1px solid transparent;
     border-radius: 4px;
     transition: all 0.3s ease-in-out;
-    color: #333;
+    color: #222;
   }
   .sina-nav .navbar-toggle:hover, .sina-nav .navbar-toggle:focus {
     outline: 0;
-    color: #333;
+    color: #222;
     background-color: #f6f6f6;
   }
   .sina-nav.navbar-reverse .navbar-toggle {
@@ -623,7 +627,7 @@
   }
   .sina-nav .mega-menu-col .mega-menu-col-title,
   .sina-nav .dropdown .dropdown-toggle {
-    padding: 10px 24px 10px 12px;
+    padding: 12px 24px 12px 12px;
   }
   .sina-nav .mega-menu-col .mega-menu-col-title:before,
   .sina-nav .dropdown .dropdown-toggle:before {
@@ -646,14 +650,14 @@
   .sina-nav .sina-menu li .mega-menu-col-title,
   .sina-nav .sina-menu li a {
     max-width: inherit;
-    padding: 15px 12px;
+    padding: 12px;
     font-weight: 400;
     display: block;
     cursor: pointer;
     font-size: 14px;
     line-height: 20px;
     transition: all 0.3s ease-in-out;
-    color: #333;
+    color: #222;
     border-top: solid 1px #eee;
   }
   .sina-nav .sina-menu li a:hover,
@@ -665,7 +669,7 @@
   .sina-nav .sina-menu li .dropdown-menu li a:focus,
   .sina-nav .sina-menu li .mega-menu .mega-menu-col ul li a:hover,
   .sina-nav .sina-menu li .mega-menu .mega-menu-col ul li a:focus {
-    color: #333;
+    color: #222;
     background-color: #f6f6f6;
   }
   .sina-nav .sina-menu > li:first-child > a {
@@ -700,25 +704,6 @@
   .sina-nav.logo-center .sina-menu .dropdown.on > .dropdown-toggle:before {
     content: "\f107";
   }
-  .sina-nav.logo-center .sina-menu, .sina-nav.logo-center .sina-menu.navbar-right, .sina-nav.logo-center .sina-menu.navbar-right .mega-menu-col-title, .sina-nav.logo-center .sina-menu.navbar-right li a,
-  .sina-nav.logo-center .sina-menu li a {
-    text-align: left;
-  }
-  .sina-nav.logo-center .sina-menu.navbar-right .mega-menu-col .mega-menu-col-title,
-  .sina-nav.logo-center .sina-menu.navbar-right .dropdown .dropdown-toggle {
-    padding: 10px 24px 10px 12px;
-  }
-  .sina-nav.logo-center .sina-menu.navbar-right .mega-menu-col .mega-menu-col-title:before,
-  .sina-nav.logo-center .sina-menu.navbar-right .dropdown .dropdown-toggle:before {
-    content: "\f105";
-    float: right;
-    right: 8px;
-    left: inherit;
-  }
-  .sina-nav.logo-center .sina-menu.navbar-right .mega-menu-col.on .mega-menu-col-title:before,
-  .sina-nav.logo-center .sina-menu.navbar-right .dropdown.on > .dropdown-toggle:before {
-    content: "\f107";
-  }
   .sina-nav.logo-center .col-half:first-child .sina-menu {
     padding-bottom: 0;
   }
@@ -739,12 +724,12 @@
   .sina-nav .extension-nav > ul > .dropdown > .dropdown-toggle,
   .sina-nav .extension-nav > ul > li > a {
     padding: 20px 10px;
-    color: #333;
+    color: #222;
   }
   .sina-nav .extension-nav > ul > .dropdown > .dropdown-toggle:hover, .sina-nav .extension-nav > ul > .dropdown > .dropdown-toggle:focus,
   .sina-nav .extension-nav > ul > li > a:hover,
   .sina-nav .extension-nav > ul > li > a:focus {
-    color: #333;
+    color: #222;
   }
   .sina-nav .extension-nav > ul .dropdown > .dropdown-toggle:before {
     display: none;
