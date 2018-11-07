@@ -15,7 +15,7 @@ $titleColor: $color;
 $font: 'Montserrat', sans-serif;
 
 // Hover, focus
-$hoverColor: #FBA500;
+$hoverColor: #1085e4;
 $hoverBG: transparent;
 
 // Active, active hover, active focus color
@@ -40,7 +40,7 @@ $specialBG: $navBG;
 
 // Transparent Nav
 $transparentColor: #dddddd;
-$transparentHoverColor: #FBA500;
+$transparentHoverColor: #1085e4;
 $transTitleColor: $transparentColor;
 
 // Side Menu
@@ -96,7 +96,7 @@ $animateTime: 1s;
 		width: calc( 100% - 108px );
 	}
 	.search-addon{
-		padding: 8px 20px;
+		padding: 12px 20px;
 		float: left;
 		color: $searchColor;
 		background-color: transparent;
@@ -244,7 +244,7 @@ $animateTime: 1s;
 		}
 		> li {
 			> a {
-				padding: 20px;
+				padding: 20px 15px;
 				max-width: 160px;
 				color: $color;
 				font-size: 14px;

@@ -22,7 +22,7 @@
   width: calc( 100% - 108px );
 }
 .search-box .search-addon {
-  padding: 8px 20px;
+  padding: 12px 20px;
   float: left;
   color: #222;
   background-color: transparent;
@@ -156,7 +156,7 @@
   margin-left: 8px;
 }
 .sina-nav .sina-menu > li > a {
-  padding: 20px;
+  padding: 20px 15px;
   max-width: 160px;
   color: #222;
   font-size: 14px;
@@ -166,7 +166,7 @@
 .sina-nav .sina-menu > li.active > a,
 .sina-nav .sina-menu > li > a:hover,
 .sina-nav .sina-menu > li > a:focus {
-  color: #FBA500;
+  color: #1085e4;
   background-color: transparent;
 }
 .sina-nav .sina-menu li .description {
@@ -224,7 +224,7 @@
 .sina-nav .menu-item-has-mega-menu.dropdown .mega-menu-col .active > a,
 .sina-nav .menu-item-has-mega-menu.dropdown .mega-menu-col > a:hover,
 .sina-nav .menu-item-has-mega-menu.dropdown .mega-menu-col > a:focus {
-  color: #FBA500;
+  color: #1085e4;
   background: transparent;
 }
 .sina-nav .menu-item-has-mega-menu.dropdown .mega-menu-col-title {
@@ -253,7 +253,7 @@
   color: #222;
 }
 .sina-nav .extension-nav > ul > li > a:hover, .sina-nav .extension-nav > ul > li > a:focus {
-  color: #FBA500;
+  color: #1085e4;
   background-color: transparent;
 }
 .sina-nav .extension-nav > ul > li > a .shop-badge {
@@ -264,7 +264,7 @@
   font-size: 10px;
   line-height: 10px;
   border-radius: 50%;
-  background-color: #FBA500;
+  background-color: #1085e4;
   color: #fff;
 }
 .sina-nav .extension-nav > ul > li.dropdown .dropdown-menu {
@@ -304,7 +304,7 @@
   color: #222;
 }
 .sina-nav .extension-nav > ul > li .shop-menu > li .shop-item-link {
-  color: #FBA500;
+  color: #1085e4;
 }
 .sina-nav .extension-nav > ul > li .shop-menu > li .shop-item-link:hover, .sina-nav .extension-nav > ul > li .shop-menu > li .shop-item-link:focus {
   background-color: transparent;
@@ -315,7 +315,7 @@
   background-color: #fcfcfc;
 }
 .sina-nav .extension-nav > ul > li .shop-menu > li.shop-total-price .shop-btn:hover, .sina-nav .extension-nav > ul > li .shop-menu > li.shop-total-price .shop-btn:focus {
-  background-color: #FBA500;
+  background-color: #1085e4;
   color: #eee;
 }
 .sina-nav .extension-nav > ul > li .shop-menu > li.shop-total-price > span {
@@ -455,7 +455,7 @@
     display: inline-block;
   }
   .sina-nav .sina-menu .mega-menu-col .sub-menu a:hover, .sina-nav .sina-menu .mega-menu-col .sub-menu a:focus {
-    color: #FBA500;
+    color: #1085e4;
     background: transparent;
   }
   .sina-nav .sina-menu .mega-menu-col-title {
@@ -513,7 +513,7 @@
   .sina-nav.navbar-transparent .sina-menu > li.active > a,
   .sina-nav.navbar-transparent .sina-menu > li > a:hover,
   .sina-nav.navbar-transparent .sina-menu > li > a:focus {
-    color: #FBA500;
+    color: #1085e4;
   }
   .sina-nav.logo-center .sina-nav-header {
     width: 100%;
