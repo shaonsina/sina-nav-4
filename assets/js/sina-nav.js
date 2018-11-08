@@ -21,6 +21,21 @@
 					getWindow 	= $(window).outerWidth();
 				});
 
+			// Active Class Add & Remove 
+			// ---------------------------
+			getNav.find('.sina-menu').each(function(){
+				var $menu = $(this);
+				$menu.on('click', function(e) {
+					if ( 'A' == e.target.tagName ) {
+						$menu.find('li.active').removeClass('active');
+						$(e.target).parent().addClass('active');
+					}
+				});
+
+				$menu.find('li.active').removeClass('active');
+				$menu.find( 'a[href="'+ location.href +'"]' ).parent('li').addClass('active');
+			});
+
 			// Navbar Center 
 			// ---------------------------------
 			if( getNav.hasClass('logo-center')){
