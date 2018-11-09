@@ -118,9 +118,9 @@ $animateTime: 1s;
 	z-index: 999;
 	left: 0;
 	right: 0;
-	transition: color, background 0.3s ease-in-out;
 	background: $navBG;
 	border: 1px solid $border;
+	transition: 0.3s ease-in-out;
 
 	ul,
 	ul ul{
@@ -273,6 +273,7 @@ $animateTime: 1s;
 			li {
 				a{
 					color: $dropdownColor;
+					font-size: 12px;
 				}
 				&.active > a,
 				> a:hover,
@@ -418,6 +419,7 @@ $animateTime: 1s;
 					}
 					.shop-item-link{
 						color: $specialColor;
+						font-size: 12px;
 
 						&:hover,
 						&:focus{
@@ -427,6 +429,7 @@ $animateTime: 1s;
 					&.shop-total-price{
 						.shop-btn{
 							display: inline-block;
+							font-size: 14px;
 							color: $dropdownColor;
 							background-color: $dropdownBG;
 
@@ -560,14 +563,15 @@ $animateTime: 1s;
 			> li {
 				float: left;
 			}
-			&.navbar-left {
-				float: left !important;
-			}
-			> .dropdown > .dropdown-toggle:after{
-				content: "\f0d7";
-				position: absolute;
-				top: 20px;
-				right: 5px;
+			> .dropdown > .dropdown-toggle{
+				padding-right: 20px;
+
+				&:after{
+					content: "\f107";
+					position: absolute;
+					top: 20px;
+					right: 5px;
+				}
 			}
 			.dropdown .dropdown-menu{
 				box-shadow: 0px 0px 0px;
@@ -639,7 +643,7 @@ $animateTime: 1s;
 
 			// Menu Right
 			// =================================
-			&.navbar-right{
+			&.sina-menu-right{
 				float: right !important;
 				left: auto;
 				right: 0;
@@ -647,11 +651,15 @@ $animateTime: 1s;
 				.mega-menu.dropdown-menu .mega-menu-col{
 					float: right;
 				}
+				> .dropdown > .dropdown-toggle{
+					padding-left: 20px;
+
+					&:after{
+						left: 5px;
+					}
+				}
 				.dropdown-menu .dropdown-menu{
 					left: -200px;
-				}
-				> .dropdown > .dropdown-toggle:after{
-					left: 5px;
 				}
 				.dropdown .dropdown-menu {
 					text-align: right;
@@ -677,6 +685,7 @@ $animateTime: 1s;
 		&.navbar-fixed.navbar-freez{
 			position: fixed !important;
 			top: 0;
+			box-shadow: 0 1px 4px $border;
 		}
 
 
@@ -758,7 +767,7 @@ $animateTime: 1s;
 
 		// Menu Center
 		// =================================
-		.sina-menu.navbar-center{
+		.sina-menu.sina-menu-center{
 			float:none;
 			margin: 0 auto;
 			display: table;
@@ -1055,9 +1064,13 @@ $animateTime: 1s;
 		.navbar-collapse {
 			margin: 0;
 		}
-		.sina-brand.social-on {
-			margin-top: 60px;
-		}
+		.sina-nav-header.social-on{
+			height: 120px;
+
+			.sina-brand {
+				margin-top: 60px;
+			}
+		} 
 	}
 }
 
