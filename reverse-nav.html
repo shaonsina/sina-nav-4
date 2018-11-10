@@ -19,7 +19,7 @@
 			background: #aaa;
 		}
 		.nav-container{
-			min-height: 120px;
+			min-height: 124px;
 		}
 		.sina-nav{
 			top: 40px;
@@ -33,7 +33,7 @@
 <body>
 
 <div class="nav-container">
-	<nav class="sina-nav mobile-sidebar navbar-transparent navbar-fixed" data-top="40" data-md-top="40" data-xl-top="40">
+	<nav class="sina-nav mobile-sidebar navbar-transparent navbar-fixed navbar-reverse" data-top="0">
 		<div class="container-fluid">
 
 			<div class="search-box">
@@ -70,7 +70,7 @@
 								<p class="shop-item-price">2 - $19</p>
 							</li>
 							<li class="shop-total-price">
-								<a href="#" class="shop-btn">Cart</a>
+								<a href="#" class="btn btn-secondary shop-btn">Cart</a>
 								<span>Total: $0.00</span>
 							</li>
 						</ul>
@@ -87,14 +87,16 @@
 					<i class="fa fa-bars"></i>
 				</button>
 				<a class="sina-brand" href="#">
-					<img src="assets/img/logo-primary.png" alt="" class="logo-primary">
-					<img src="assets/img/logo-secondary.png" alt="" class="logo-secondary">
+					<h2>
+						Sina-nav
+					</h2>
+					<p>Learn Something New</p>
 				</a>
 			</div><!-- .sina-nav-header -->
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="navbar-menu">
-				<ul class="sina-menu" data-in="fadeInLeft" data-out="fadeInOut">
+				<ul class="sina-menu sina-menu-full-right" data-in="fadeInLeft" data-out="fadeInOut">
 					<li><a href="#home">Home</a></li>
 					<li><a href="#about">About</a></li>
 					<li class="dropdown">
@@ -152,7 +154,7 @@
 							</ul><!-- end row -->
 						</div>
 					</li>
-					<li><a href="#about">Contact</a></li>
+					<li><a href="#contact">Contact</a></li>
 					<li class="sina-nav-cta-btn"><a href="#">Free trail</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->

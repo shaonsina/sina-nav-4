@@ -1,6 +1,8 @@
 /**
- * Template name : sina-nav - Multi Purpose Menu
- * Author 		 : shaonsina
+ * Template name: Sina-nav Multi Purpose Menu
+ * Template URI: https://github.com/shaonsina/sina-nav-4
+ * Version: 2.0
+ * Author: shaonsina
  */
 
 (function ($) {
@@ -52,13 +54,13 @@
 				for (var i = 0; i < divided; i++) {
 					mainNav.append( lists[i] );
 				}
-				mainNav.addClass('navbar-left').wrap('<div class="col-half left"></div>');
+				mainNav.addClass('sina-menu-left').wrap('<div class="col-half left"></div>');
 
 				// Create right part
 				for (var i = divided; i < lists.length; i++) {
 					rightNav.append( lists[i] );
 				}
-				getNav.find('.col-half.left').after( rightNav.addClass('navbar-right') );
+				getNav.find('.col-half.left').after( rightNav.addClass('sina-menu-dropdown-right') );
 				rightNav.wrap('<div class="col-half right"></div>');
 			}
 
@@ -109,10 +111,10 @@
 				if( winWidth > 1599 && scrollTop > xlTop ){
 					getNav.addClass('navbar-freez');
 				}
-				else if( winWidth > 1199 && scrollTop > top ){
+				else if( winWidth < 1600 && winWidth > 1199 && scrollTop > top ){
 					getNav.addClass('navbar-freez');
 				}
-				else if( winWidth > 991 && scrollTop > mdTop ){
+				else if( winWidth < 1200 && winWidth > 1024 && scrollTop > mdTop ){
 					getNav.addClass('navbar-freez');
 				}
 				else {
@@ -128,7 +130,7 @@
 					freezNav();
 				});
 
-				if ( getWindow > 991 && $(window).scrollTop() > top ) {
+				if ( getWindow > 1024 && $(window).scrollTop() > top ) {
 					getNav.addClass('navbar-freez');
 				}
 			}
@@ -142,10 +144,10 @@
 				if( winWidth > 1599 && scrollTop > xlTop ){
 					getNav.removeClass('navbar-transparent');
 				}
-				else if( winWidth > 1199 && scrollTop > top ){
+				else if( winWidth < 1600 && winWidth > 1199 && scrollTop > top ){
 					getNav.removeClass('navbar-transparent');
 				}
-				else if( winWidth > 991 && scrollTop > mdTop ){
+				else if( winWidth < 1200 && winWidth > 1024 && scrollTop > mdTop ){
 					getNav.removeClass('navbar-transparent');
 				}
 				else {
@@ -161,7 +163,7 @@
 					transNav();
 				});
 
-				if ( getWindow > 991 && $(window).scrollTop() > top ) {
+				if ( getWindow > 1024 && $(window).scrollTop() > top ) {
 					getNav.removeClass('navbar-transparent');
 				}
 			}
@@ -223,7 +225,7 @@
 				$('.mega-menu-col', menu).children('.sub-menu').removeClass('dropdown-menu '+anim+'animated');
 			});
 
-			if( getWindow < 992 ) {
+			if( getWindow < 1025 ) {
 				// Megamenu
 				getNav.find('.menu-item-has-mega-menu').each(function(){
 					var megamenu 	= this,
