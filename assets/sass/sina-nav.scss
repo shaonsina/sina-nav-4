@@ -148,7 +148,7 @@ $animateTime: 1s;
 	// Brand
 	.sina-brand {
 		height: 60px;
-		max-width: 210px;
+		max-width: 200px;
 		padding: 0;
 		margin: 0 30px 0 0;
 		float: left;
@@ -257,7 +257,7 @@ $animateTime: 1s;
 				background-color: $hoverBG;
 			}
 			&.sina-nav-cta-btn {
-				padding: 10px 15px;
+				padding: 11px 15px;
 				margin-left: 20px;
 
 				a{
@@ -614,7 +614,7 @@ $animateTime: 1s;
 					left: 100%;
 					top: 0;
 				}
-				.dropdown:first-child .dropdown-menu{
+				.dropdown:first-child > .dropdown-menu{
 					top: -1px;
 				}
 				> li {
@@ -675,7 +675,7 @@ $animateTime: 1s;
 			// Menu Right
 			// =================================
 			&.sina-menu-dropdown-right{
-				float: right !important;
+				float: right;
 				left: auto;
 				right: 0;
 
@@ -709,8 +709,12 @@ $animateTime: 1s;
 					}
 				}
 			}
+			&.sina-menu-right,
 			&.sina-menu-list-right > li{
 				float: right;
+			}
+			&.sina-menu-left{
+				float: left;
 			}
 		}
 
@@ -792,18 +796,12 @@ $animateTime: 1s;
 				}
 			}
 			.sina-menu{
-				float: none !important;
-				margin: 0 0 -7px 0;
 				display: inline-block;
 				padding: 0;
 
 				> li {
-					> .dropdown-menu{
-						margin-top: -1px;
-
-						&.mega-menu{
-							margin-top: 0;
-						}
+					> .dropdown-menu.mega-menu{
+						margin-top: 0;
 					}
 				}
 			}
@@ -862,7 +860,7 @@ $animateTime: 1s;
 			position: relative;
 			float: left;
 			font-size: 18px;
-			margin: 13px 0 0 0;
+			margin: 12px 0 0 0;
 			padding: 4px 10px;
 			width: 38px;
 			cursor: pointer;

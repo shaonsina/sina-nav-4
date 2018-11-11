@@ -69,7 +69,7 @@
 }
 .sina-nav .sina-brand {
   height: 60px;
-  max-width: 210px;
+  max-width: 200px;
   padding: 0;
   margin: 0 30px 0 0;
   float: left;
@@ -170,7 +170,7 @@
   background-color: transparent;
 }
 .sina-nav .sina-menu > li.sina-nav-cta-btn {
-  padding: 10px 15px;
+  padding: 11px 15px;
   margin-left: 20px;
 }
 .sina-nav .sina-menu > li.sina-nav-cta-btn a {
@@ -454,7 +454,7 @@
     left: 100%;
     top: 0;
   }
-  .sina-nav .sina-menu .dropdown .dropdown-menu .dropdown:first-child .dropdown-menu {
+  .sina-nav .sina-menu .dropdown .dropdown-menu .dropdown:first-child > .dropdown-menu {
     top: -1px;
   }
   .sina-nav .sina-menu .dropdown .dropdown-menu > li > a {
@@ -498,7 +498,7 @@
     padding: 4px 10px;
   }
   .sina-nav .sina-menu.sina-menu-dropdown-right {
-    float: right !important;
+    float: right;
     left: auto;
     right: 0;
   }
@@ -528,8 +528,11 @@
     left: 8px;
     right: inherit;
   }
-  .sina-nav .sina-menu.sina-menu-list-right > li {
+  .sina-nav .sina-menu.sina-menu-right, .sina-nav .sina-menu.sina-menu-list-right > li {
     float: right;
+  }
+  .sina-nav .sina-menu.sina-menu-left {
+    float: left;
   }
   .sina-nav.navbar-fixed.navbar-freez {
     position: fixed !important;
@@ -592,13 +595,8 @@
     padding-left: 120px;
   }
   .sina-nav.logo-center .sina-menu {
-    float: none !important;
-    margin: 0 0 -7px 0;
     display: inline-block;
     padding: 0;
-  }
-  .sina-nav.logo-center .sina-menu > li > .dropdown-menu {
-    margin-top: -1px;
   }
   .sina-nav.logo-center .sina-menu > li > .dropdown-menu.mega-menu {
     margin-top: 0;
@@ -641,7 +639,7 @@
     position: relative;
     float: left;
     font-size: 18px;
-    margin: 13px 0 0 0;
+    margin: 12px 0 0 0;
     padding: 4px 10px;
     width: 38px;
     cursor: pointer;

@@ -54,13 +54,13 @@
 				for (var i = 0; i < divided; i++) {
 					mainNav.append( lists[i] );
 				}
-				mainNav.addClass('sina-menu-left').wrap('<div class="col-half left"></div>');
+				mainNav.addClass('sina-menu-right').wrap('<div class="col-half left"></div>');
 
 				// Create right part
 				for (var i = divided; i < lists.length; i++) {
 					rightNav.append( lists[i] );
 				}
-				getNav.find('.col-half.left').after( rightNav.addClass('sina-menu-dropdown-right') );
+				getNav.find('.col-half.left').after( rightNav.addClass('sina-menu-dropdown-right sina-menu-left') );
 				rightNav.wrap('<div class="col-half right"></div>');
 			}
 
