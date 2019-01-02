@@ -186,11 +186,13 @@
 				$('.widget-bar-btn > a', this).on('click', function(e){
 					e.preventDefault();
 					getNav.children('.widget-bar').toggleClass('on');
+					getNav.children('.sina-nav-overlay').addClass('on').removeClass('off');
 				});
 			});
 			getNav.find('.widget-bar .close-widget-bar').on('click', function(e){
 				e.preventDefault();
 				getNav.children('.widget-bar').removeClass('on');
+				getNav.children('.sina-nav-overlay').addClass('off').removeClass('on');
 			});
 
 			// Toggle Button

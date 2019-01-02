@@ -107,6 +107,25 @@ $animateTime: 1s;
 	}
 }
 
+// Overlay
+// ======================
+.sina-nav-overlay{
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  opacity: 0;
+  transition: top 0.5s ease-in-out;
+  opacity: 1;
+  background: rgba(0,0,0,0.5);
+}
+.sina-nav-overlay.off{
+  top: -100%;
+}
+.sina-nav-overlay.on{
+  top: 0;
+}
 
 // Genaral Nav
 // =================================
@@ -501,7 +520,7 @@ $animateTime: 1s;
 		padding: 20px;
 		height: 100%;
 		z-index: 999;
-		transition: all 0.3s ease-in-out;
+		transition: all 0.5s ease-in-out;
 		background-color: $sideBG;
 
 		&.on{
@@ -1066,7 +1085,7 @@ $animateTime: 1s;
 			top: 0;
 			padding: 0 0 60px;
 			margin: 0;
-			transition: all 0.3s ease-in-out;
+			transition: all 0.4s ease-in-out;
 			background-color: $smCollapseBG;
 
 			&.show{
@@ -1103,7 +1122,7 @@ $animateTime: 1s;
 			margin-left: -300px;
 		}
 		> .wrapper{
-			transition: all 0.3s ease-in-out;
+			transition: all 0.4s ease-in-out;
 			position: relative;
 		}
 	}
