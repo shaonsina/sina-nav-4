@@ -1,7 +1,7 @@
 /**
  * Template name: Sina-nav Multi Purpose Menu
  * Template URI: https://github.com/shaonsina/sina-nav-4
- * Version: 2.0
+ * Version: 2.1
  * Author: shaonsina
  */
 
@@ -110,21 +110,14 @@ $animateTime: 1s;
 // Overlay
 // ======================
 .sina-nav-overlay{
+  display: none;
   position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 998;
-  opacity: 0;
-  transition: top 0.5s ease-in-out;
-  opacity: 1;
-  background: rgba(0,0,0,0.5);
-}
-.sina-nav-overlay.off{
-  top: -100%;
-}
-.sina-nav-overlay.on{
-  top: 0;
+  z-index: 9998;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 // Genaral Nav
@@ -519,8 +512,8 @@ $animateTime: 1s;
 		width: 300px;
 		padding: 20px;
 		height: 100%;
-		z-index: 999;
-		transition: all 0.5s ease-in-out;
+		z-index: 99999;
+		transition: all 0.6s ease;
 		background-color: $sideBG;
 
 		&.on{

@@ -1,7 +1,7 @@
 /**
  * Template name: Sina-nav Multi Purpose Menu
  * Template URI: https://github.com/shaonsina/sina-nav-4
- * Version: 2.0
+ * Version: 2.1
  * Author: shaonsina
  */
 
@@ -185,14 +185,18 @@
 			getNav.find('.extension-nav').each(function(){
 				$('.widget-bar-btn > a', this).on('click', function(e){
 					e.preventDefault();
+					getNav.children('.sina-nav-overlay').fadeIn(400);
 					getNav.children('.widget-bar').toggleClass('on');
-					getNav.children('.sina-nav-overlay').addClass('on').removeClass('off');
 				});
 			});
 			getNav.find('.widget-bar .close-widget-bar').on('click', function(e){
 				e.preventDefault();
 				getNav.children('.widget-bar').removeClass('on');
-				getNav.children('.sina-nav-overlay').addClass('off').removeClass('on');
+				getNav.children('.sina-nav-overlay').fadeOut(600);
+			});
+			getNav.children('.sina-nav-overlay').on('click', function() {
+				getNav.children('.widget-bar').removeClass('on');
+				$(this).fadeOut(600);
 			});
 
 			// Toggle Button
