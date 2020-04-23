@@ -835,15 +835,15 @@
     left: inherit;
   }
 
-  body.mobile-left > .wrapper {
+  body.mobile-left .sina-nav-wrapper {
     margin-left: 300px;
     margin-right: -300px;
   }
-  body.mobile-right > .wrapper {
+  body.mobile-right .sina-nav-wrapper {
     margin-right: 300px;
     margin-left: -300px;
   }
-  body > .wrapper {
+  body .sina-nav-wrapper {
     transition: all 0.4s ease-in-out;
     position: relative;
   }
@@ -870,12 +870,12 @@
     margin-left: -250px;
   }
 
-  body.mobile-left > .wrapper {
+  body.mobile-left .sina-nav-wrapper {
     margin-left: 250px;
     margin-right: -250px;
   }
 
-  body.mobile-right > .wrapper {
+  body.mobile-right .sina-nav-wrapper {
     margin-right: 250px;
     margin-left: -250px;
   }

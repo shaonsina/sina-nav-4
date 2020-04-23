@@ -1,7 +1,7 @@
 /**
  * Template name: Sina-nav Multi Purpose Menu
  * Template URI: https://github.com/shaonsina/sina-nav-4
- * Version: 2.1
+ * Version: 2.2
  * Author: shaonsina
  */
 
@@ -70,8 +70,8 @@
 				var $collapse = getNav.find('.navbar-collapse');
 
 				// Add Class to body
-				if ( $('body').children('.wrapper').length < 1 ) {
-					$('body').wrapInner('<div class="wrapper"></div>');
+				if ( $('body').children('.sina-nav-wrapper').length < 1 ) {
+					$('body').wrapInner('<div class="sina-nav-wrapper"></div>');
 				}
 
 				if ( getNav.hasClass('navbar-reverse') ) {
@@ -223,6 +223,19 @@
 					$(dropdown).addClass('on');
 				});
 				$('.dropdown', menu).on('mouseleave', function(){
+					var dropdown = this;
+
+					$('.dropdown-menu', dropdown).eq(0).removeClass(getIn).stop().fadeOut().addClass(getOut);
+					$(dropdown).removeClass('on');
+				});
+
+				$('.dropdown', menu).on('focusin', function(){
+					var dropdown = this;
+
+					$('.dropdown-menu', dropdown).eq(0).removeClass(getOut).stop().fadeIn().addClass(getIn);
+					$(dropdown).addClass('on');
+				});
+				$('.dropdown', menu).on('focusout', function(){
 					var dropdown = this;
 
 					$('.dropdown-menu', dropdown).eq(0).removeClass(getIn).stop().fadeOut().addClass(getOut);
